@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--dubbo发布服务要提供的信息 -->
+    <!--服务提供方 -->
+    <dubbo:application name="dubbo-server" owner="ruby"/>
+
+    <!--注册中心 -->
+    <dubbo:registry address="zookeeper://192.168.204.129:2181"/>
+
+    <!--服务协议 默认就是dubbo协议，可以不配,单个服务支持多协议要配-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="hessian" port="20881"/>
+
+    <!--需要发布的服务 可以在这里配置service支持的协议，dubbo支持http，hessian，RMI等-->
+    <!--如protocol="hessian",需要引入hessian的包-->
+    <dubbo:service interface="com.my.IHello" ref="helloService" protocol="dubbo" version="1.0.0" />
+    <dubbo:service interface="com.my.IHello" ref="helloServiceV2" protocol="dubbo" version="1.0.1"/>
+    <dubbo:service interface="com.my.IProtocol" ref="protocolService" protocol="hessian,dubbo"/>
+
+    <!--服务实现类bean -->
+    <bean id="helloService" class="com.my.HelloServiceImpl"/>
+    <bean id="protocolService" class="com.my.ProtocolImpl"/>
+    <bean id="helloServiceV2" class="com.my.HelloServiceImplVersion2"/>
+</beans>

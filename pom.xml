@@ -6,7 +6,13 @@
 
   <groupId>com.my</groupId>
   <artifactId>test</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>dubbo-api</module>
+    <module>dubbo-provider</module>
+      <module>dubbo-spi</module>
+  </modules>
 
   <name>com.test</name>
   <!-- FIXME change it to the project's website -->

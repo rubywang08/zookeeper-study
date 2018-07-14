@@ -7,13 +7,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class BIOServerMultiThread {
+    private Integer i = 2;
 
     public static void main(String[] args) throws IOException {
         ServerSocket server = new ServerSocket(8080);
         while (true) {
-            Socket socket = server.accept();
-            RunImpl runimpl = new RunImpl(socket);
-            runimpl.run();
+        Socket socket = server.accept();
+           Thread t1 = new Thread(new RunImpl(socket));
+            t1.start();
         }
 
     }
@@ -33,6 +34,7 @@ public class BIOServerMultiThread {
 
                 reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 System.out.println(reader.readLine());
+                System.out.println(Thread.currentThread().getId() + "server读完了");
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {

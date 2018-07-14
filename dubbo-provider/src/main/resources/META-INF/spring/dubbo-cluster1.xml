@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--dubbo发布服务要提供的信息 -->
+    <!--服务提供方 -->
+    <dubbo:application name="dubbo-server" owner="ruby"/>
+
+    <!--注册中心,address配多个，意味着注册中心是集群 -->
+    <dubbo:registry address="zookeeper://192.168.204.129:2181" id="zk1"/>
+    <!--支持多注册中心 -->
+    <!--<dubbo:registry address="zookeeper://192.168.204.130:2181" id="zk2"/>-->
+
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <dubbo:service interface="com.my.IHello" ref="helloService" protocol="dubbo" registry="zk1"/>
+
+    <!--服务实现类bean -->
+    <bean id="helloService" class="com.my.HelloServiceImpl"/>
+</beans>
