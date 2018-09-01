@@ -1,4 +1,4 @@
-package src.com.test;
+package src.com.mytest;
 
 import java.lang.ref.WeakReference;
 

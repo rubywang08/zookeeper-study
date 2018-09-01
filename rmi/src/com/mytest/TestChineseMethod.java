@@ -1,4 +1,4 @@
-package src.com.test;
+package src.com.mytest;
 
 public class TestChineseMethod {
 	public static void main(String[] args) {

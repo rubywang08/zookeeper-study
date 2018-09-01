@@ -1,6 +1,5 @@
-package src.com.test;
+package src.com.mytest;
 
-import java.lang.ref.SoftReference;
 import java.util.Comparator;
 
 public class TestLambda {

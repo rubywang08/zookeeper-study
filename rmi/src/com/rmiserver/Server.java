@@ -10,7 +10,7 @@ public class Server {
         try {
             LocateRegistry.createRegistry(1099);
             ITestService service = new TestServiceImpl();//创建了一个远程对象
-            Naming.rebind("rmi://127.0.0.1/com.test", service);//注册中心 key - value
+            Naming.rebind("rmi://127.0.0.1/com.mytest", service);//注册中心 key - value
             System.out.println("test服务已启动");
         } catch (RemoteException e) {
             e.printStackTrace();

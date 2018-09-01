@@ -1,4 +1,4 @@
-package src.com.test.createobjtest;
+package src.com.mytest.createobjtest;
 
 public class B extends A{
     public static int setValue(int i) {

@@ -1,7 +1,4 @@
-package src.com.test.createobjtest;
-
-import java.util.PriorityQueue;
-import java.util.TreeMap;
+package src.com.mytest.createobjtest;
 
 public class A {
     private int a;

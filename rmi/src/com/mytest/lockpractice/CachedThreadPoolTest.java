@@ -1,4 +1,4 @@
-package src.com.test.lockpractice;
+package src.com.mytest.lockpractice;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

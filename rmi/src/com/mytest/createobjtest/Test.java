@@ -1,4 +1,4 @@
-package src.com.test.createobjtest;
+package src.com.mytest.createobjtest;
 
 public class Test {
     public static void main(String[] args) {

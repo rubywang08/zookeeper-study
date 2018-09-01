@@ -1,4 +1,4 @@
-package src.com.test;
+package src.com.mytest;
 
 interface TestDefault {
     void test();

@@ -1,4 +1,4 @@
-package src.com.test;
+package src.com.mytest;
 
 import java.io.Serializable;
 import java.util.AbstractCollection;

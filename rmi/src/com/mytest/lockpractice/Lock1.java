@@ -1,4 +1,4 @@
-package src.com.test.lockpractice;
+package src.com.mytest.lockpractice;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;

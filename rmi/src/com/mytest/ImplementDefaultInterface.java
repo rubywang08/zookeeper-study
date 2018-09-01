@@ -1,9 +1,9 @@
-package src.com.test;
+package src.com.mytest;
 
 public class ImplementDefaultInterface implements TestDefault {
     @Override
     public void test() {
-        System.out.println("com/test");
+        System.out.println("com/mytest");
     }
 
     public static void main(String[] args) {

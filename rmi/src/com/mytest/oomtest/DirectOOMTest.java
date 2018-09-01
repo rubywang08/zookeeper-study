@@ -1,4 +1,4 @@
-package src.com.test.oomtest;
+package src.com.mytest.oomtest;
 
 import sun.misc.Unsafe;
 

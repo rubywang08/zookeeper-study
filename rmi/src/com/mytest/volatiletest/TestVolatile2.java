@@ -1,4 +1,4 @@
-package src.com.test.volatiletest;
+package src.com.mytest.volatiletest;
 
 public class TestVolatile2 {
     private static volatile String var;

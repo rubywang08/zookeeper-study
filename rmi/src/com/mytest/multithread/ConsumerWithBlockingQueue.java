@@ -1,6 +1,4 @@
-package src.com.test.multithread;
-
-import javafx.beans.binding.When;
+package src.com.mytest.multithread;
 
 import java.util.concurrent.BlockingQueue;
 

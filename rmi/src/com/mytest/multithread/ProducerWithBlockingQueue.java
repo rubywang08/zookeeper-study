@@ -1,4 +1,4 @@
-package src.com.test.multithread;
+package src.com.mytest.multithread;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
